@@ -33,7 +33,7 @@ def index():
 def move():
     request.get_data()
     logger.info(request.json)
-    logger.info("")
+    logger.info("keep throwing!!!! ")
     return moves[random.randrange(len(moves))]
 
 if __name__ == "__main__":
