@@ -22,7 +22,8 @@ logging.basicConfig(level=os.environ.get("LOGLEVEL", "INFO"))
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-moves = ['F', 'T', 'L', 'R']
+##moves = ['F', 'T', 'L', 'R']
+moves = [ 'T' ]
 
 @app.route("/", methods=['GET'])
 def index():
@@ -31,7 +32,8 @@ def index():
 @app.route("/", methods=['POST'])
 def move():
     request.get_data()
-    logger.info(request.json)
+     .info(request.json)
+     
     return moves[random.randrange(len(moves))]
 
 if __name__ == "__main__":
