@@ -32,8 +32,7 @@ def index():
 @app.route("/", methods=['POST'])
 def move():
     request.get_data()
-     .info(request.json)
-     
+    logger.info(request.json)
     return moves[random.randrange(len(moves))]
 
 if __name__ == "__main__":
